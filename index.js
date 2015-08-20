@@ -67,7 +67,7 @@ module.exports = function (zscore) {
     var perc = ZTABLE[yZscore.toString()][col];
 
     if(zscore > 0) {
-        perc = 1 - perc;
+        perc = Math.round((1 - perc) * 10000) / 10000;
     }
 
     return perc;
