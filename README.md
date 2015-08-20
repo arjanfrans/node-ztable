@@ -1,5 +1,5 @@
 # node-ztables
-[![NPM](https://nodei.co/npm/multiconfig.png)](https://www.npmjs.com/package/ztable)
+[![NPM](https://nodei.co/npm/ztable.png)](https://www.npmjs.com/package/ztable)
 
 [![Build Status](https://travis-ci.org/arjanfrans/node-ztable.svg?branch=master)](https://travis-ci.org/arjanfrans/node-ztable)
 [![Coverage Status](https://coveralls.io/repos/arjanfrans/node-ztable/badge.svg)](https://coveralls.io/r/arjanfrans/node-ztable)
