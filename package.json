@@ -1,6 +1,6 @@
 {
   "name": "ztable",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Convert z-scores to a percentiles.",
   "main": "index.js",
   "scripts": {
