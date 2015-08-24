@@ -1,4 +1,4 @@
-# node-ztables
+# node-ztable
 [![NPM](https://nodei.co/npm/ztable.png)](https://www.npmjs.com/package/ztable)
 
 [![Build Status](https://travis-ci.org/arjanfrans/node-ztable.svg?branch=master)](https://travis-ci.org/arjanfrans/node-ztable)
