@@ -39,8 +39,15 @@ var ZTABLE =
 };
 
 module.exports = function (zscore) {
+    zscore = parseFloat(zscore);
+
+    if (isNaN(zscore)) {
+        throw new TypeError('zscore is not a valid number');
+    }
+
     var yZscore = -3.4;
     var xZscore = 0.09;
+
     if(zscore === 0) {
         return 0.5000;
     }

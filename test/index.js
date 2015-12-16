@@ -1,9 +1,8 @@
 var expect = require('chai').expect;
 var ztable = require('../');
 
-describe('ztable', function() {
-
-    before(function() {
+describe('ztable', function () {
+    before(function () {
         this.v1 = ztable(-3.49);
         this.v2 = ztable(3.49);
         this.v3 = ztable(1.621231);
@@ -13,9 +12,10 @@ describe('ztable', function() {
         this.v7 = ztable(6);
         this.v8 = ztable(1.1097576707798367);
         this.v9 = ztable(1.109733243278343243243214353453425454325);
+        this.v10 = ztable(1);
     });
 
-    it('zscores match percentiles', function() {
+    it('zscores match percentiles', function () {
         expect(this.v1).to.equal(0.0002);
         expect(this.v2).to.equal(0.9998);
         expect(this.v3).to.equal(0.9474);
@@ -25,7 +25,24 @@ describe('ztable', function() {
         expect(this.v7).to.equal(1);
         expect(this.v8).to.equal(0.8643);
         expect(this.v9).to.equal(0.8643);
+        expect(this.v10).to.equal(0.8413);
+
+        this.stringInput = ztable('2');
+        expect(this.stringInput).to.equal(0.9772);
     });
 
+    it('throws an error if NaN', function () {
+        var error = null;
+
+        try {
+            var invalidInput = ztable('hi');
+
+        } catch (err) {
+            error = err;
+        }
+
+        expect(error).to.not.equal(null);
+        expect(error.message).to.equal('zscore is not a valid number');
+    });
 });
 
