@@ -13,6 +13,8 @@ describe('ztable', function () {
         this.v8 = ztable(1.1097576707798367);
         this.v9 = ztable(1.109733243278343243243214353453425454325);
         this.v10 = ztable(1);
+        this.v11 = ztable(-0.03);
+        this.v12 = ztable(0.03);
     });
 
     it('zscores match percentiles', function () {
@@ -26,7 +28,8 @@ describe('ztable', function () {
         expect(this.v8).to.equal(0.8643);
         expect(this.v9).to.equal(0.8643);
         expect(this.v10).to.equal(0.8413);
-
+        expect(this.v11).to.equal(0.4880);
+        expect(this.v12).to.equal(0.5120);
         this.stringInput = ztable('2');
         expect(this.stringInput).to.equal(0.9772);
     });
